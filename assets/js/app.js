@@ -2,7 +2,6 @@
 var topics = ["Superbikes", "Supercars", "Jets", "Planes", "Trains", "Trucks", "Gocarts"];
 var addedTopics = [];
 
-
 	var getButtons = function(){
         for (var i = 0; i < topics.length; i++){
         	var newBtn = $("<button data-vehicle" + "=" + topics[i] + ">" + topics[i] + "</button>");
@@ -44,10 +43,16 @@ var addedTopics = [];
             var vehicleImage = $("<img>");
             vehicleImage.attr("src", results[i].images.fixed_height.url);
 
+            $("#giphy-images").addClass("col-md-12 text-center");
+
             gifyDiv.prepend(p);
             gifyDiv.prepend(vehicleImage);
 
+            $(p).css("color", "blue");
+            $(p).css("font-size", "25px");
             $("#giphy-images").prepend(gifyDiv);
+
+
           }
         });
        });
